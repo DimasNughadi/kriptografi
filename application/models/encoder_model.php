@@ -87,11 +87,11 @@ class encoder_model extends CI_Model
         return $plaintext;
     }
 
-    function Hill($data, $key)
+    function Hill($plaintext, $key1, $key2, $key3, $key4)
     {
     }
 
-    function Transposisi($data, $key1, $key2)
+    function Transposisi($plaintext, $key1, $key2)
     {
     }
 
@@ -123,7 +123,7 @@ class encoder_model extends CI_Model
         return $result;
     }
 
-    function Playfair($data, $key)
+    function Playfair($plaintext, $key)
     {
     }
 }
