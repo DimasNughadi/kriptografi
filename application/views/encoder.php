@@ -52,17 +52,43 @@
                       <input name="key2" type="text" class="form-control" id="key2" placeholder="text">
                     </fieldset>
                   </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4" id="div3" style="display:none;">
+                  <div class="col-lg-8 col-md-8 col-sm-8" id="div3" style="display:none;">
                     <fieldset>
-                      <label for="key">Kunci: </label>
                       <div class="row">
                         <div class = "col">
-                          <input name="key3" type="number" class="form-control" id="key3" placeholder="0">
-                          <input name="key33" type="number" class="form-control" id="key33" placeholder="0">
+                        <label for="key">Kunci: </label>
+                          <select name="matriks" id="matriks" onchange="showDiv2('div', this)"required="">
+                            <option selected disabled hidden>Matriks</option>
+                            <option value="m2">2 x 2</option>
+                            <option value="m3">3 x 3</option>
+                          </select>
                         </div>
-                        <div class = "col">
-                          <input name="key333" type="number" class="form-control" id="key333" placeholder="0">
-                          <input name="key3333" type="number" class="form-control" id="key3333" placeholder="0">
+                        <div class = "row" id = "2x2" style="display:none;">
+                          <div class = "col">
+                            <input name="a1" type="number" class="form-control" id="a1" placeholder="0">
+                            <input name="a2" type="number" class="form-control" id="a2" placeholder="0">
+                          </div>
+                          <div class = "col">
+                            <input name="a3" type="number" class="form-control" id="a3" placeholder="0">
+                            <input name="a4" type="number" class="form-control" id="a4" placeholder="0">
+                          </div>
+                        </div>
+                        <div class = "row" id = "3x3" style="display:none;">
+                          <div class = "col">
+                            <input name="b1" type="number" class="form-control" id="b1" placeholder="0">
+                            <input name="b2" type="number" class="form-control" id="b2" placeholder="0">
+                            <input name="b3" type="number" class="form-control" id="b3" placeholder="0">
+                          </div>
+                          <div class = "col">
+                            <input name="b4" type="number" class="form-control" id="b4" placeholder="0">
+                            <input name="b5" type="number" class="form-control" id="b5" placeholder="0">
+                            <input name="b6" type="number" class="form-control" id="b6" placeholder="0">
+                          </div>
+                          <div class = "col">
+                            <input name="b7" type="number" class="form-control" id="b7" placeholder="0">
+                            <input name="b8" type="number" class="form-control" id="b8" placeholder="0">
+                            <input name="b9" type="number" class="form-control" id="b9" placeholder="0">
+                          </div>
                         </div>
                       </div>
                     </fieldset>
@@ -464,18 +490,30 @@
         }
      }
 
+     function showDiv2(prefix, chooser)
+     {
+      var selectedOption = (chooser.options[chooser.selectedIndex].value);
+      if(selectedOption == "m2"){
+        document.getElementById("2x2").style.display = "block";
+        document.getElementById("3x3").style.display = "none";
+      }else if(selectedOption == "m3"){
+        document.getElementById("3x3").style.display = "block";
+        document.getElementById("2x2").style.display = "none";
+      }
+     }
+
      function myFunction() {
-  // Get the text field
-  var copyText = document.getElementById("myInput");
+      // Get the text field
+      var copyText = document.getElementById("myInput");
 
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
+      // Select the text field
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
 
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
-  
-  // Alert the copied text
-  alert("Copied the text: " + copyText.value);
-}
+      // Copy the text inside the text field
+      navigator.clipboard.writeText(copyText.value);
+      
+      // Alert the copied text
+      alert("Copied the text: " + copyText.value);
+    }
 </script>
