@@ -55,7 +55,6 @@
                   <div class="col-lg-4 col-md-4 col-sm-4" id="div3" style="display:none;">
                     <fieldset>
                       <label for="key">Kunci: </label>
-                      <!-- <input name="key3" type="number" class="form-control" id="key3" placeholder="0"> -->
                       <div class="row">
                         <div class = "col">
                           <input name="key3" type="number" class="form-control" id="key3" placeholder="0">
