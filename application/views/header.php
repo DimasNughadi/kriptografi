@@ -49,7 +49,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li <?php if($_SERVER['REQUEST_URI']=="/kriptografi/dashboard") { ?>  class="nav-item active"   <?php   }
+                <li <?php if($_SERVER['REQUEST_URI']=="/kriptografi/dashboard" || $_SERVER['REQUEST_URI']=="/kriptografi") { ?>  class="nav-item active"   <?php   }
                 else{ ?> class="nav-item" <?php } ?>>
                 <a class="nav-link" href="<?= site_url('dashboard') ?>">Dashboard</a>
                 </li>
@@ -57,13 +57,13 @@ https://templatemo.com/tm-546-sixteen-clothing
                 else{ ?> class="nav-item" <?php } ?>>
                 <a class="nav-link" href="<?= site_url('encoder') ?>">Encoder</a>
               </li>
-              <li <?php if($_SERVER['REQUEST_URI']=="/kriptografi/decoder") { ?>  class="nav-item active"   <?php   }
+              <li <?php if($_SERVER['REQUEST_URI']=="/kriptografi/decoder" || $_SERVER['REQUEST_URI']=="/kriptografi/decoder/decode") { ?>  class="nav-item active"   <?php   }
                 else{ ?> class="nav-item" <?php } ?>>
                 <a class="nav-link" href="<?= site_url('decoder') ?>">Decoder</a>
               </li>
-              <li <?php if($_SERVER['REQUEST_URI']=="/kriptografi/chat") { ?>  class="nav-item active"   <?php   }
+              <li <?php if($_SERVER['REQUEST_URI']=="/kriptografi/simulasi") { ?>  class="nav-item active"   <?php   }
                 else{ ?> class="nav-item" <?php } ?>>
-                <a class="nav-link" href="<?= site_url('chat') ?>">chat</a>
+                <a class="nav-link" href="<?= site_url('simulasi') ?>">simulasi</a>
               </li>
             </ul>
           </div>
