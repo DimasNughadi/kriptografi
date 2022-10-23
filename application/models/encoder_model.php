@@ -113,7 +113,7 @@ class encoder_model extends CI_Model
             elseif (ctype_lower($plaintext[$i])) {
                 $result =
                     $result .
-                    chr((($key1 * ord($plaintext[$i]) + $key2 - 97) % 26) + 97);
+                    chr((($key1 * ord($plaintext[$i]) + $key2 - 96) % 26) + 96);
             } else {
                 $result = $result . chr(ord($plaintext[$i]));
             }

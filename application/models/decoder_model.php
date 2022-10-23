@@ -121,24 +121,11 @@ class decoder_model extends CI_Model
             // apply transformation to each
             // character Encrypt Uppercase letters
             if (ctype_upper($plaintext[$i])) {
-                $result =
-                    $result .
-                    chr(
-                        (($key1_inv * (ord($plaintext[$i]) - $key2) + 65) %
-                            26) +
-                            65
-                    );
+                $result = $result.chr((($key1_inv * (ord($plaintext[$i]) - $key2) - 65) % 26) + 65 );
             }
-
             // Encrypt Lowercase letters
             elseif (ctype_lower($plaintext[$i])) {
-                $result =
-                    $result .
-                    chr(
-                        (($key1_inv * (ord($plaintext[$i]) - $key2) + 97) %
-                            26) +
-                            97
-                    );
+                $result = $result.chr((($key1_inv * (ord($plaintext[$i]) - $key2) - 96) % 26) +  96 );
             } else {
                 $result = $result . chr(ord($plaintext[$i]));
             }
