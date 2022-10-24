@@ -33,10 +33,10 @@
     										<option selected disabled hidden><?php echo $algokey; ?></option>
     										<option value="Caesar">Caesar Cipher</option>
     										<option value="Vigenere">Vigenere Cipher</option>
-    										<option value="Hill">Hill Cipher</option>
-    										<option value="Transposisi">Transposisi</option>
+    										<!-- <option value="Hill">Hill Cipher</option> -->
+    										<!-- <option value="Transposisi">Transposisi</option> -->
     										<option value="Affine">Affine</option>
-    										<option value="Playfair">Playfair</option>
+    										<!-- <option value="Playfair">Playfair</option> -->
     									</select>
     								</fieldset><br>
     							</div>
@@ -54,29 +54,6 @@
     								</fieldset>
     							</div>
 
-    							<div class="col-lg-4 col-md-4 col-sm-4" id="div3" style="display:none;">
-    								<fieldset>
-    									<label for="key">Kunci: </label>
-    									<div class="row">
-    										<div class="col">
-    											<input name="key3" type="number" class="form-control" id="key3" placeholder="0">
-    											<input name="key33" type="number" class="form-control" id="key33" placeholder="0">
-    										</div>
-    										<div class="col">
-    											<input name="key333" type="number" class="form-control" id="key333" placeholder="0">
-    											<input name="key3333" type="number" class="form-control" id="key3333" placeholder="0">
-    										</div>
-    									</div>
-    								</fieldset>
-    							</div>
-
-    							<div class="col-lg-4 col-md-4 col-sm-4" id="div4" style="display:none;">
-    								<fieldset>
-    									<label for="key">Kunci: </label>
-    									<input name="key4" type="number" class="form-control" id="key4" placeholder="0">
-    								</fieldset>
-    							</div>
-
     							<div class="col-lg-4 col-md-4 col-sm-4" id="div5" style="display:none;">
     								<fieldset>
     									<label for="key">Kunci: </label>
@@ -91,37 +68,31 @@
     								</fieldset>
     							</div>
 
-    							<div class="col-lg-4 col-md-4 col-sm-4" id="div6" style="display:none;">
+    							<!-- <div id="hasil" class="col-lg-12"> -->
+    							<div class="col-lg-12">
     								<fieldset>
-    									<label for="key">Kunci: </label>
-    									<input name="key6" type="number" class="form-control" id="key6" placeholder="0">
+    									<textarea name="plaintext" rows="6" class="form-control" id="plaintext" placeholder="Pesan Anda"
+    										required=""><?php echo $plaintext; ?></textarea>
     								</fieldset>
     							</div>
-    							<!-- <div id="hasil" class="col-lg-12"> -->
-    								<div class="col-lg-12">
-    									<fieldset>
-    										<textarea name="plaintext" rows="6" class="form-control" id="plaintext" placeholder="Pesan Anda"
-    											required=""><?php echo $plaintext; ?></textarea>
-    									</fieldset>
-    								</div>
-    								<div class="col-lg-12">
-    									<fieldset>
-    										<button type="submit" name="Encode" value="Simpan"
-    											class="filled-button form-control">Enkripsi</button>
-    									</fieldset>
-    								</div><br><br>
-    								<div class="col-lg-12">
-    									<fieldset>
-    										<label>Hasil Enkripsi: </label><br>
-    										<h2><?php echo $hasil; ?></h2><br>
-    										<input type="text" id="myInput" value="<?php echo $hasil; ?>" hidden>
-    									</fieldset>
-    								</div>
-    								<div class="col-lg-12">
-    									<fieldset>
-    										<button type="button" onclick="myFunction()" class="filled-button">Copy Text</button>
-    									</fieldset>
-    								</div>
+    							<div class="col-lg-12">
+    								<fieldset>
+    									<button type="submit" name="Encode" value="Simpan"
+    										class="filled-button form-control">Enkripsi</button>
+    								</fieldset>
+    							</div><br><br>
+    							<div class="col-lg-12">
+    								<fieldset>
+    									<label>Hasil Enkripsi: </label><br>
+    									<h2><?php echo $hasil; ?></h2><br>
+    									<input type="text" id="myInput" value="<?php echo $hasil; ?>" hidden>
+    								</fieldset>
+    							</div>
+    							<div class="col-lg-12">
+    								<fieldset>
+    									<button type="button" onclick="myFunction()" class="filled-button">Copy Text</button>
+    								</fieldset>
+    							</div>
     							<!-- </div> -->
     						</div>
     					</form>
@@ -355,15 +326,9 @@
     			div.style.display = 'block';
     			document.getElementById("key1").setAttribute('required', "");
     			document.getElementById("key2").removeAttribute('required');
-    			document.getElementById("key3").removeAttribute('required');
-    			document.getElementById("key4").removeAttribute('required');
     			document.getElementById("key5").removeAttribute('required');
-    			document.getElementById("key6").removeAttribute('required');
     			document.getElementById(prefix + "2").style.display = "none";
-    			document.getElementById(prefix + "3").style.display = "none";
-    			document.getElementById(prefix + "4").style.display = "none";
     			document.getElementById(prefix + "5").style.display = "none";
-    			document.getElementById(prefix + "6").style.display = "none";
     			document.getElementById(prefix + "1.1").style.display = "block";
     			document.getElementById(prefix + "2.2").style.display = "none";
     			document.getElementById(prefix + "3.3").style.display = "none";
@@ -376,10 +341,7 @@
     			div.style.display = 'block';
     			document.getElementById("key2").setAttribute('required', "");
     			document.getElementById("key1").removeAttribute('required');
-    			document.getElementById("key3").removeAttribute('required');
-    			document.getElementById("key4").removeAttribute('required');
     			document.getElementById("key5").removeAttribute('required');
-    			document.getElementById("key6").removeAttribute('required');
     			document.getElementById(prefix + "1").style.display = "none";
     			document.getElementById(prefix + "3").style.display = "none";
     			document.getElementById(prefix + "4").style.display = "none";
@@ -392,58 +354,12 @@
     			document.getElementById(prefix + "5.5").style.display = "none";
     			document.getElementById(prefix + "6.6").style.display = "none";
     			document.getElementById(prefix + "0").style.display = "none";
-    		} else if (selectedOption == "Hill") {
-    			var div = document.getElementById(prefix + "3");
-    			div.style.display = 'block';
-    			document.getElementById("key3").setAttribute('required', "");
-    			document.getElementById("key2").removeAttribute('required');
-    			document.getElementById("key1").removeAttribute('required');
-    			document.getElementById("key4").removeAttribute('required');
-    			document.getElementById("key5").removeAttribute('required');
-    			document.getElementById("key6").removeAttribute('required');
-    			document.getElementById("hasil").style.display = "none";
-    			document.getElementById(prefix + "2").style.display = "none";
-    			document.getElementById(prefix + "1").style.display = "none";
-    			document.getElementById(prefix + "4").style.display = "none";
-    			document.getElementById(prefix + "5").style.display = "none";
-    			document.getElementById(prefix + "6").style.display = "none";
-    			document.getElementById(prefix + "1.1").style.display = "none";
-    			document.getElementById(prefix + "2.2").style.display = "none";
-    			document.getElementById(prefix + "3.3").style.display = "block";
-    			document.getElementById(prefix + "4.4").style.display = "none";
-    			document.getElementById(prefix + "5.5").style.display = "none";
-    			document.getElementById(prefix + "6.6").style.display = "none";
-    			document.getElementById(prefix + "0").style.display = "none";
-    		} else if (selectedOption == "Transposisi") {
-    			var div = document.getElementById(prefix + "4");
-    			div.style.display = 'block';
-    			document.getElementById("key4").setAttribute('required', "");
-    			document.getElementById("key2").removeAttribute('required');
-    			document.getElementById("key3").removeAttribute('required');
-    			document.getElementById("key1").removeAttribute('required');
-    			document.getElementById("key5").removeAttribute('required');
-    			document.getElementById("key6").removeAttribute('required');
-    			document.getElementById(prefix + "2").style.display = "none";
-    			document.getElementById(prefix + "3").style.display = "none";
-    			document.getElementById(prefix + "1").style.display = "none";
-    			document.getElementById(prefix + "5").style.display = "none";
-    			document.getElementById(prefix + "6").style.display = "none";
-    			document.getElementById(prefix + "1.1").style.display = "none";
-    			document.getElementById(prefix + "2.2").style.display = "none";
-    			document.getElementById(prefix + "3.3").style.display = "none";
-    			document.getElementById(prefix + "4.4").style.display = "block";
-    			document.getElementById(prefix + "5.5").style.display = "none";
-    			document.getElementById(prefix + "6.6").style.display = "none";
-    			document.getElementById(prefix + "0").style.display = "none";
     		} else if (selectedOption == "Affine") {
     			var div = document.getElementById(prefix + "5");
     			div.style.display = 'block';
     			document.getElementById("key5").setAttribute('required', "");
     			document.getElementById("key2").removeAttribute('required');
-    			document.getElementById("key3").removeAttribute('required');
-    			document.getElementById("key4").removeAttribute('required');
     			document.getElementById("key1").removeAttribute('required');
-    			document.getElementById("key6").removeAttribute('required');
     			document.getElementById(prefix + "2").style.display = "none";
     			document.getElementById(prefix + "3").style.display = "none";
     			document.getElementById(prefix + "4").style.display = "none";
@@ -455,27 +371,6 @@
     			document.getElementById(prefix + "4.4").style.display = "none";
     			document.getElementById(prefix + "5.5").style.display = "block";
     			document.getElementById(prefix + "6.6").style.display = "none";
-    			document.getElementById(prefix + "0").style.display = "none";
-    		} else if (selectedOption == "Playfair") {
-    			var div = document.getElementById(prefix + "6");
-    			div.style.display = 'block';
-    			document.getElementById("key6").setAttribute('required', "");
-    			document.getElementById("key2").removeAttribute('required');
-    			document.getElementById("key3").removeAttribute('required');
-    			document.getElementById("key4").removeAttribute('required');
-    			document.getElementById("key5").removeAttribute('required');
-    			document.getElementById("key1").removeAttribute('required');
-    			document.getElementById(prefix + "2").style.display = "none";
-    			document.getElementById(prefix + "3").style.display = "none";
-    			document.getElementById(prefix + "4").style.display = "none";
-    			document.getElementById(prefix + "5").style.display = "none";
-    			document.getElementById(prefix + "1").style.display = "none";
-    			document.getElementById(prefix + "1.1").style.display = "none";
-    			document.getElementById(prefix + "2.2").style.display = "none";
-    			document.getElementById(prefix + "3.3").style.display = "none";
-    			document.getElementById(prefix + "4.4").style.display = "none";
-    			document.getElementById(prefix + "5.5").style.display = "none";
-    			document.getElementById(prefix + "6.6").style.display = "block";
     			document.getElementById(prefix + "0").style.display = "none";
     		}
     	}

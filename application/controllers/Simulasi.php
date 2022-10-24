@@ -21,7 +21,7 @@ class Simulasi extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('header');
-		$this->load->view('simulasi');
+		$this->load->view('playfair');
 		$this->load->view('footer');
 	}
 }

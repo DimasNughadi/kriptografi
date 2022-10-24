@@ -34,10 +34,7 @@
                         <option selected disabled hidden><?php echo $algokey; ?></option>
                         <option value="Caesar">Caesar Cipher</option>
                         <option value="Vigenere">Vigenere Cipher</option>
-                        <option value="Hill">Hill Cipher</option>
-                        <option value="Transposisi">Transposisi</option>
                         <option value="Affine">Affine</option>
-                        <option value="Playfair">Playfair</option>
                       </select>
                     </fieldset><br>
                   </div>
