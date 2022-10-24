@@ -35,15 +35,15 @@ class Encoder extends CI_Controller {
 			$data['plaintext'] = $plaintext;
 			$data['algokey'] = $algo ." | ".$key;
 		}
-		elseif($algo == 'Hill'){
-			$key1 = $this->input->post('key3');
-			$key2 = $this->input->post('key33');
-			$key3 = $this->input->post('key333');
-			$key4 = $this->input->post('key3333');
-			$data['hasil'] = $this->encoder_model->$algo($plaintext, $key1, $key2, $key3, $key4);
-			$data['plaintext'] = $plaintext;
-			$data['algokey'] = $algo ." | ".$key1." | ".$key2." | ".$key3." | ".$key4." | ";
-		}
+		// elseif($algo == 'Hill'){
+		// 	$keyEnkrip = array(
+		// 		array(4,3),
+		// 		array(3,3)
+		// 	);
+		// 	$data['hasil'] = $this->encoder_model->$algo($plaintext, $keyEnkrip);
+		// 	$data['plaintext'] = $plaintext;
+		// 	$data['algokey'] = $algo ." | ".$keyEnkrip;
+		// }
 		elseif($algo == 'Transposisi'){
 			$a = 4;
 		}
@@ -55,10 +55,11 @@ class Encoder extends CI_Controller {
 			$data['algokey'] = $algo ." | ".$key1." | ".$key2." | ";
 		}
 		elseif($algo == 'Playfair'){
-			$a = 6;
+			$key = $this->input->post('key6');
+			$data['hasil'] = $this->encoder_model->$algo($plaintext, $key);
+			$data['plaintext'] = $plaintext;
+			$data['algokey'] = $algo ." | ".$key;
 		}
-		// $key2 = $this->input->post('key'.$b);
-
 
 		$this->load->view('header');
 		$this->load->view('encoder', $data);

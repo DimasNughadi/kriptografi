@@ -87,9 +87,54 @@ class encoder_model extends CI_Model
         return $plaintext;
     }
 
-    function Hill($plaintext, $key1, $key2, $key3, $key4)
-    {
-    }
+    // function Hill($plaintext, $keyEnkrip)
+    // {
+    //     $mod26 = array('a' => 0, 'b' => 1, 'c' => 2, 'd' => 3, 'e' => 4,
+    //           'f' => 5, 'g' => 6, 'h' => 7, 'i' => 8, 'j' => 9,
+    //           'k' => 10, 'l' => 11, 'm' => 12, 'n' => 13, 'o' => 14,
+    //           'p' => 15, 'q' => 16, 'r' => 17, 's' => 18,'t' => 19,
+    //           'u' => 20, 'v' => 21, 'w' => 22, 'x' => 23, 'y' => 24,
+    //           'z' => 25);
+
+    //     $_mod26 = array('0' => 'a', '1'  => 'b', '2' => 'c', '3' => 'd', '4' => 'e',
+    //                 '5'  => 'f', '6'  => 'g', '7' => 'h', '8' => 'i', '9' => 'j',
+    //                 '10' => 'k', '11' => 'l', '12'=> 'm', '13'=> 'n', '14'=> 'o',
+    //                 '15' => 'p', '16' => 'q', '17'=> 'r', '18'=> 's', '19'=> 't',
+    //                 '20' => 'u', '21' => 'v', '22'=> 'w', '23'=> 'x', '24'=> 'y',
+    //                 '25' => 'z');
+    //     $string = $plaintext;
+    //                //pecah string nya menjadi perhuruf
+    //             //   $key = trim($_POST['key']);
+
+    //                $userInputString = $string;
+    //                $jumlahPlaintext = strlen($userInputString);
+
+    //                if ($jumlahPlaintext % 2 == 0) {
+    //                  $plaintext = $userInputString;
+    //                }else {
+    //                  $plaintext = $userInputString."a";
+    //                }
+
+    //                $arr2 = str_split($plaintext, 2);
+
+    //                $multiArray;
+
+    //                foreach ($arr2 as $index =>$value) {
+
+    //                  $multiArray[$index] =  str_split($value);
+    //                }
+
+    //                foreach ($multiArray as $coba => $value) {
+    //                //  foreach($value as $index => $final){
+    //                  $chipAtas = ($mod26[$value[0]] * $keyEnkrip[0][0]) + ($mod26[$value[1]] * $keyEnkrip[0][1]);
+    //                  $chipBawah = ($mod26[$value[0]] * $keyEnkrip[1][0]) + ($mod26[$value[1]] * $keyEnkrip[1][1]);
+    //                  echo $_mod26[$chipAtas % 26];
+    //                  // echo "<br>";
+    //                  echo $_mod26[$chipBawah % 26];
+
+    //                }
+
+    // }
 
     function Transposisi($plaintext, $key1, $key2)
     {
