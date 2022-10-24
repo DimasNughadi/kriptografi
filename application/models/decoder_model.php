@@ -19,14 +19,14 @@ class decoder_model extends CI_Model
             if (ctype_upper($plaintext[$i])) {
                 $result =
                     $result .
-                    chr(((ord($plaintext[$i]) - $key - 65) % 26) + 65);
+                    chr(((ord($plaintext[$i]) - $key + 65) % 26) + 65);
             }
 
             // Encrypt Lowercase letters
             elseif (ctype_lower($plaintext[$i])) {
                 $result =
                     $result .
-                    chr(((ord($plaintext[$i]) - $key - 97) % 26) + 97);
+                    chr(((ord($plaintext[$i]) - $key + 97) % 26) + 97);
             } else {
                 $result = $result . chr(ord($plaintext[$i]));
             }

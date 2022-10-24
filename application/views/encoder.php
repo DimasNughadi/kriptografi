@@ -46,12 +46,14 @@
                       <input name="key1" type="number" class="form-control" id="key1" placeholder="0">
                     </fieldset>
                   </div>
+
                   <div class="col-lg-4 col-md-4 col-sm-4" id="div2" style="display:none;">
                     <fieldset>
                       <label for="key">Kunci: </label>
                       <input name="key2" type="text" class="form-control" id="key2" placeholder="text">
                     </fieldset>
                   </div>
+
                   <div class="col-lg-4 col-md-4 col-sm-4" id="div3" style="display:none;">
                     <fieldset>
                       <label for="key">Kunci: </label>
@@ -67,12 +69,14 @@
                       </div>
                     </fieldset>
                   </div>
+
                   <div class="col-lg-4 col-md-4 col-sm-4" id="div4" style="display:none;">
                     <fieldset>
                       <label for="key">Kunci: </label>
                       <input name="key4" type="number" class="form-control" id="key4" placeholder="0">
                     </fieldset>
                   </div>
+
                   <div class="col-lg-4 col-md-4 col-sm-4" id="div5" style="display:none;">
                     <fieldset>
                       <label for="key">Kunci: </label>
@@ -86,12 +90,14 @@
                       </div>
                     </fieldset>
                   </div>
+
                   <div class="col-lg-4 col-md-4 col-sm-4" id="div6" style="display:none;">
                     <fieldset>
                       <label for="key">Kunci: </label>
                       <input name="key6" type="number" class="form-control" id="key6" placeholder="0">
                     </fieldset>
                   </div>
+
                   <div class="col-lg-12">
                     <fieldset>
                       <textarea name="plaintext" rows="6" class="form-control" id="plaintext" placeholder="Pesan Anda" required=""><?php echo $plaintext; ?></textarea>
@@ -326,9 +332,6 @@
           document.getElementById(prefix+"5.5").style.display = "none";
           document.getElementById(prefix+"6.6").style.display = "none";
           document.getElementById(prefix+"0").style.display = "none";
-          // document.getElementById("3x3").style.display = "none";
-          // document.getElementById("2x2").style.display = "none";
-          // document.getElementById("matriks").style.display = "none";
         }
       else if(selectedOption == "Vigenere")
         {
@@ -352,9 +355,6 @@
           document.getElementById(prefix+"5.5").style.display = "none";
           document.getElementById(prefix+"6.6").style.display = "none";
           document.getElementById(prefix+"0").style.display = "none";
-          // document.getElementById("3x3").style.display = "none";
-          // document.getElementById("2x2").style.display = "none";
-          // document.getElementById("matriks").style.display = "none";
         }
       else if(selectedOption == "Hill")
         {
@@ -401,9 +401,6 @@
           document.getElementById(prefix+"5.5").style.display = "none";
           document.getElementById(prefix+"6.6").style.display = "none";
           document.getElementById(prefix+"0").style.display = "none";
-          // document.getElementById("3x3").style.display = "none";
-          // document.getElementById("2x2").style.display = "none";
-          // document.getElementById("matriks").style.display = "none";
         }
       else if(selectedOption == "Affine")
         {
@@ -427,9 +424,6 @@
           document.getElementById(prefix+"5.5").style.display = "block";
           document.getElementById(prefix+"6.6").style.display = "none";
           document.getElementById(prefix+"0").style.display = "none";
-          // document.getElementById("3x3").style.display = "none";
-          // document.getElementById("2x2").style.display = "none";
-          // document.getElementById("matriks").style.display = "none";
         }
       else if(selectedOption == "Playfair")
         {
@@ -453,23 +447,8 @@
           document.getElementById(prefix+"5.5").style.display = "none";
           document.getElementById(prefix+"6.6").style.display = "block";
           document.getElementById(prefix+"0").style.display = "none";
-          // document.getElementById("3x3").style.display = "none";
-          // document.getElementById("2x2").style.display = "none";
-          // document.getElementById("matriks").style.display = "none";
         }
      }
-
-    //  function showMatriks(prefix2, chooser2)
-    //  {
-    //   var selectedOption2 = (chooser2.options[chooser2.selectedIndex].value);
-    //   if(selectedOption2 == "m2"){
-    //     document.getElementById("2x2").style.display = "block";
-    //     document.getElementById("3x3").style.display = "none";
-    //   }else if(selectedOption2 == "m3"){
-    //     document.getElementById("3x3").style.display = "block";
-    //     document.getElementById("2x2").style.display = "none";
-    //   }
-    //  }
 
      function myFunction() {
       // Get the text field
