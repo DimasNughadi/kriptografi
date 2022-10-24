@@ -91,85 +91,38 @@
 			<div class="col-md-8">
 				<div class="contact-form">
 
-                    <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-4" id="div1">
-                                <fieldset>
-                                <label for="key">Kunci: </label>
-                                <input name="mult" type="number" max="25" class="form-control" id="width" placeholder="0">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                <textarea name="p" rows="6" class="form-control" id="ui" placeholder="Pesan Anda" required=""></textarea>
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                    <button onclick="encrypt()" class="filled-button form-control">Enkripsi</button>
-                                    <!-- <p><input name="btnEn" value="Encrypt" onclick="encrypt()" type="button"></p>  -->
-                                </fieldset>
-                            </div><br><br>
-                            <div class="col-lg-12">
-                                <fieldset>
-                                <label>Hasil Enkripsi: </label><br><br>
-                                <textarea name='c' id="encT"></textarea>
-                                </fieldset><br>
-                                    <button onclick="decrypt()" class="btn-primary form-control">Dekripsi</button>
-                                <fieldset>
-                                <label>Hasil Dekripsi: </label><br><br>
-                                <textarea name='c' id="decT"></textarea>
-                                </fieldset>
-                            </div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-4" id="div1">
+							<fieldset>
+								<label for="key">Kunci: </label>
+								<input name="mult" type="number" max="25" class="form-control" id="width"
+									placeholder="0">
+							</fieldset>
 						</div>
-
-					<!-- <section role="main" class="content-body">
-						<form>Plaintext<br>
-							<textarea name="p" rows="4" cols="50" wrap="soft" placeholder="Pesan Anda"
-								id="ui"></textarea>
-							<p>a =
-								<select name="mult" size="1" id="width">
-									<option>0</option>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
-									<option>11</option>
-									<option>12</option>
-									<option>13</option>
-									<option>14</option>
-									<option>15</option>
-									<option>16</option>
-									<option>17</option>
-									<option>18</option>
-									<option>19</option>
-									<option>20</option>
-									<option>21</option>
-									<option>22</option>
-									<option>23</option>
-									<option>24</option>
-									<option>25</option>
-								</select>
-							</p>
-							<p><input name="btnEn" value="Encrypt" onclick="encrypt()" type="button">
-							</p>
-							<p>Ciphertext<br>
-								<textarea name="c" rows="4" cols="50" wrap="soft" placeholder="Ciphertext"
-									id="encT"></textarea>
-							</p>
-							<input name="btnDe" value="Decrypt" onclick="decrypt()" type="button">
-
-							<p>Plaintext hasil decrypt<br>
-								<textarea name="c" rows="4" cols="50" wrap="soft" placeholder="plaintext"
-									id="decT"></textarea>
-							</p>
-						</form>
-					</section> -->
+						<div class="col-lg-12">
+							<fieldset>
+								<textarea name="p" rows="6" class="form-control" id="ui" placeholder="Pesan Anda"
+									required=""></textarea>
+							</fieldset>
+						</div>
+						<div class="col-lg-12">
+							<fieldset>
+								<button onclick="encrypt()" class="filled-button form-control">Enkripsi</button>
+								<!-- <p><input name="btnEn" value="Encrypt" onclick="encrypt()" type="button"></p>  -->
+							</fieldset>
+						</div><br><br>
+						<div class="col-lg-12">
+							<fieldset>
+								<label>Hasil Enkripsi: </label><br><br>
+								<textarea name='c' id="encT"></textarea>
+							</fieldset><br>
+							<button onclick="decrypt()" class="btn-primary form-control">Dekripsi</button>
+							<fieldset>
+								<label>Hasil Dekripsi: </label><br><br>
+								<textarea name='c' id="decT"></textarea>
+							</fieldset>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-4" id="div0">
