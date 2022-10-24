@@ -250,7 +250,6 @@
 			</div>
 			<div class="col-md-8">
 				<div class="contact-form">
-					<form action="#" method="">
 						<div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-4" id="div1">
                                 <fieldset>
@@ -265,17 +264,22 @@
                             </div>
                             <div class="col-lg-12">
                                 <fieldset>
-                                <button onclick="processKey(), cipher()" class="filled-button form-control">Enkripsi</button>
+                                    <button onclick="processKey(), cipher()" class="filled-button form-control">Enkripsi</button>
+                                    
                                 </fieldset>
                             </div><br><br>
                             <div class="col-lg-12">
                                 <fieldset>
-                                <label>Hasil Dekripsi: </label><br><br>
+                                <label>Hasil Enkripsi: </label><br><br>
                                 <h2 id="printValue"></h2>
+                                </fieldset>
+                                <button onclick="deCodeCipher()" class=" form-control btn-primary">dekripsi</button>
+                                <fieldset>
+                                <label>Hasil Dekripsi: </label><br><br>
+                                <h2 id="printDeCode"></h2>
                                 </fieldset>
                             </div>
 						</div>
-					</form>
 				</div>
 			</div>
 			<div class="col-md-4" id="div0">
