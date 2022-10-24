@@ -65,13 +65,9 @@ https://templatemo.com/tm-546-sixteen-clothing
                 else{ ?> class="nav-item" <?php } ?>>
                 <a class="nav-link" href="<?= site_url('playfair') ?>">Playfair</a>
               </li>
-              <li <?php if($_SERVER['REQUEST_URI']=="/kriptografi/hill") { ?>  class="nav-item active"   <?php   }
-                else{ ?> class="nav-item" <?php } ?>>
-                <a class="nav-link" href="<?= site_url('hill') ?>">Hill</a>
-              </li>
               <li <?php if($_SERVER['REQUEST_URI']=="/kriptografi/tranposisi") { ?>  class="nav-item active"   <?php   }
                 else{ ?> class="nav-item" <?php } ?>>
-                <a class="nav-link" href="<?= site_url('tranposisi') ?>">Tranposisi</a>
+                <a class="nav-link" href="<?= site_url('box') ?>">Tranposisi</a>
               </li>
               <li <?php if($_SERVER['REQUEST_URI']=="/kriptografi/zigzag") { ?>  class="nav-item active"   <?php   }
                 else{ ?> class="nav-item" <?php } ?>>
