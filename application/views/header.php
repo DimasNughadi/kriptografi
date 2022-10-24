@@ -61,9 +61,12 @@ https://templatemo.com/tm-546-sixteen-clothing
                 else{ ?> class="nav-item" <?php } ?>>
                 <a class="nav-link" href="<?= site_url('decoder') ?>">Decoder</a>
               </li>
-              <li <?php if($_SERVER['REQUEST_URI']=="/kriptografi/simulasi") { ?>  class="nav-item active"   <?php   }
+              <li <?php if($_SERVER['REQUEST_URI']=="/kriptografi/playfair") { ?>  class="nav-item active"   <?php   }
                 else{ ?> class="nav-item" <?php } ?>>
-                <a class="nav-link" href="<?= site_url('simulasi') ?>">simulasi</a>
+                <a class="nav-link" href="<?= site_url('playfair') ?>">Playfair</a>
+              </li>
+              <li class="dropdown"></i></a>
+                  
               </li>
             </ul>
           </div>
