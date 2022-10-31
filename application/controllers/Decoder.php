@@ -1,16 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Decoder extends CI_Controller {
-
-	public function __construct()
-    {
+	public function __construct(){
         parent::__construct();
 		$this->load->model('decoder_model');
     }
-
-	public function index()
-	{
+	public function index(){
 		$data['ciphertext'] = null;
 		$data['key'] = null;
 		$data['algokey'] = "Pilih Jenis Algoritma";
@@ -19,9 +14,7 @@ class Decoder extends CI_Controller {
 		$this->load->view('decoder', $data);
 		$this->load->view('footer');
 	}
-
-	public function decode()
-	{	
+	public function decode(){	
 		$algo = $this->input->post('algo');
 		$ciphertext = $this->input->post('ciphertext');
 		if($algo == 'Caesar'){
@@ -34,21 +27,17 @@ class Decoder extends CI_Controller {
 			$data['hasil'] = $this->decoder_model->$algo($ciphertext, $key);
 			$data['ciphertext'] = $ciphertext;
 			$data['algokey'] = $algo ." | ".$key;
-		}
-		elseif($algo == 'Hill'){
+		}elseif($algo == 'Hill'){
 			$a = 3;
-		}
-		elseif($algo == 'Transposisi'){
+		}elseif($algo == 'Transposisi'){
 			$a = 4;
-		}
-		elseif($algo == 'Affine'){
+		}elseif($algo == 'Affine'){
 			$key1 = $this->input->post('key5');
 			$key2 = $this->input->post('key55');
 			$data['hasil'] = $this->decoder_model->$algo($ciphertext, $key1, $key2);
 			$data['ciphertext'] = $ciphertext;
 			$data['algokey'] = $algo ." | ".$key1." | ".$key2." | ";
-		}
-		elseif($algo == 'Playfair'){
+		}elseif($algo == 'Playfair'){
 			$a = 6;
 		}
 
